@@ -14,12 +14,13 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
-            children: [
-              const CircleAvatar(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              CircleAvatar(
                 radius: 50.0,
                 backgroundImage: AssetImage('images/me.jpeg'),
               ),
-              const Text(
+              Text(
                 'Hans Weno',
                 style: TextStyle(
                   fontFamily: 'Pacifico',
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const Text(
+              Text(
                 'LARAVEL DEVELOPER',
                 style: TextStyle(
                   fontFamily: 'Source Sans Pro',
@@ -38,58 +39,53 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Container(
-                padding: const EdgeInsets.all(10.0),
-                color: Colors.white,
-                margin: const EdgeInsets.symmetric(
-                  vertical: 10.0,
-                  horizontal: 25.0,
-                ),
-                child: Row(
-                  children: const [
-                    Icon(
-                      Icons.phone,
-                      color: Colors.teal,
-                    ),
-                    SizedBox(
-                      width: 20.0,
-                    ),
-                    Text(
-                      '+237 652 384 938',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 4, 104, 92),
-                        fontFamily: 'Source Sans Pro',
-                        fontSize: 20.0,
-                      ),
-                    ),
-                  ],
+              SizedBox(
+                height: 20.0,
+                width: 250.0,
+                child: Divider(
+                  color: Color.fromARGB(255, 147, 206, 200),
                 ),
               ),
-              Container(
-                padding: const EdgeInsets.all(10.0),
-                color: Colors.white,
-                margin: const EdgeInsets.symmetric(
+              Card(
+                color: Colors.yellow,
+                margin: EdgeInsets.symmetric(
                   vertical: 10.0,
                   horizontal: 25.0,
                 ),
-                child: Row(
-                  children: const [
-                    Icon(
-                      Icons.email,
-                      color: Colors.teal,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    '+237 652 384 938',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 4, 104, 92),
+                      fontFamily: 'Source Sans Pro',
+                      fontSize: 20.0,
                     ),
-                    SizedBox(
-                      width: 20.0,
+                  ),
+                ),
+              ),
+              Card(
+                color: Colors.yellow,
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    'billyhans90@gmail.com',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 4, 104, 92),
+                      fontFamily: 'Source Sans Pro',
+                      fontSize: 20.0,
                     ),
-                    Text(
-                      'billyhans90@gmail.com',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 4, 104, 92),
-                        fontFamily: 'Source Sans Pro',
-                        fontSize: 20.0,
-                      ),
-                    )
-                  ],
+                  ),
                 ),
               ),
             ],
