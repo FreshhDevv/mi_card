@@ -13,35 +13,20 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Container(
-                height: 100.0,
-                width: 100.0,
-                color: Colors.red,
+          child: Column(
+            children: const [
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/me.jpeg'),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    height: 100.0,
-                    width: 100.0,
-                    color: Colors.yellow,
-                  ),
-                  Container(
-                    height: 100.0,
-                    width: 100.0,
-                    color: Colors.green,
-                  ),
-                ],
-              ),
-              Container(
-                height: 100.0,
-                width: 100.0,
-                color: Colors.blue,
-              ),
+              Text(
+                'Hans Weno',
+                style: TextStyle(
+                  fontSize: 40.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              )
             ],
           ),
         ),
