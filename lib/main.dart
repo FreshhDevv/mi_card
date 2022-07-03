@@ -14,12 +14,12 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
-            children: const [
-              CircleAvatar(
+            children: [
+              const CircleAvatar(
                 radius: 50.0,
                 backgroundImage: AssetImage('images/me.jpeg'),
               ),
-              Text(
+              const Text(
                 'Hans Weno',
                 style: TextStyle(
                   fontFamily: 'Pacifico',
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Text(
+              const Text(
                 'LARAVEL DEVELOPER',
                 style: TextStyle(
                   fontFamily: 'Source Sans Pro',
@@ -37,7 +37,61 @@ class MyApp extends StatelessWidget {
                   letterSpacing: 2.5,
                   fontWeight: FontWeight.bold,
                 ),
-              )
+              ),
+              Container(
+                padding: const EdgeInsets.all(10.0),
+                color: Colors.white,
+                margin: const EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                child: Row(
+                  children: const [
+                    Icon(
+                      Icons.phone,
+                      color: Colors.teal,
+                    ),
+                    SizedBox(
+                      width: 20.0,
+                    ),
+                    Text(
+                      '+237 652 384 938',
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 4, 104, 92),
+                        fontFamily: 'Source Sans Pro',
+                        fontSize: 20.0,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.all(10.0),
+                color: Colors.white,
+                margin: const EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                child: Row(
+                  children: const [
+                    Icon(
+                      Icons.email,
+                      color: Colors.teal,
+                    ),
+                    SizedBox(
+                      width: 20.0,
+                    ),
+                    Text(
+                      'billyhans90@gmail.com',
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 4, 104, 92),
+                        fontFamily: 'Source Sans Pro',
+                        fontSize: 20.0,
+                      ),
+                    )
+                  ],
+                ),
+              ),
             ],
           ),
         ),
